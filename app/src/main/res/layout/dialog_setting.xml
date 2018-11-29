@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="280dp"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:padding="15dp" >
+    
+    <LinearLayout
+        android:id="@+id/ip_ll"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_weight="1"
+        android:gravity="center">
+
+        <TextView
+            android:id="@+id/ip_tv"
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:text="IP地址"
+            android:textSize="20sp"
+             />
+
+        <EditText
+            android:id="@+id/ip_et"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:ems="10"
+            android:inputType="textNoSuggestions" 
+            android:maxLength="15">
+
+            <requestFocus />
+        </EditText>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/port_ll"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_weight="1"
+        android:gravity="center" >
+
+        <TextView
+            android:id="@+id/port_tv"
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:text="端口"
+            android:textSize="20sp" />
+
+        <EditText
+            android:id="@+id/port_et"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:ems="10"
+            android:inputType="numberSigned" 
+            android:maxLength="5"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_marginTop="10dp"
+        android:layout_weight="1"
+        android:gravity="center" >
+
+        <Button
+            android:id="@+id/setting_dlg_cancel_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_margin="2dp"
+            android:gravity="center"
+            android:background="@drawable/bg_button"
+            android:text="取消 "/>
+        
+        <Button
+            android:id="@+id/setting_dlg_confirm_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_margin="2dp"
+            android:gravity="center"
+            android:background="@drawable/bg_button"
+            android:text="确定" />
+
+    </LinearLayout>
+
+</LinearLayout>
