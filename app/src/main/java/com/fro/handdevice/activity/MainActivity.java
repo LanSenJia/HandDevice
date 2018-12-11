@@ -1,6 +1,7 @@
 package com.fro.handdevice.activity;
 
 import android.app.Dialog;
+import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.text.TextUtils;
@@ -38,6 +39,11 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class MainActivity extends AppCompatActivity implements CallBack {
+
+    //打开串口的参数
+    int baudrate = 115200;
+    int sets = 1;
+    int device = 0;
 
     //手持机
     private ToggleButton scanTb;
@@ -104,15 +110,8 @@ public class MainActivity extends AppCompatActivity implements CallBack {
      * 打开串口
      */
     private void openSerialPort(){
-//        if (SerialPort.openSerial(Const.DEVICE, Const.BAUDRATE, Const.EVENMODE) == 1) {
-//            Toast.makeText(this, "串口打开失败", Toast.LENGTH_SHORT).show();
-//        }
-//        Log.i(Const.TAG,"串口打开成功！");
-//
-//        // 初始化串口信息
-//        HelpUtil.sp = mSerialPort;
-//        HelpUtil.mc.initReturnBySerialPort(HelpUtil.sp, 0);
-
+        //给模块上电
+        mSerialPort.SetPowerState(1);
         if (SerialPort.openSerial(Const.DEVICE, Const.BAUDRATE,  Const.EVENMODE + 1) == 0) {
             Toast.makeText(this, "串口打卡开失败", Toast.LENGTH_SHORT).show();
             mSerialPort.SetPowerState(0);

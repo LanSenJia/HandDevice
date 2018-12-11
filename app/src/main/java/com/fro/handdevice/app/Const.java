@@ -21,6 +21,6 @@ public class Const {
 //	public static final Integer DEVICE = 2;//1：条码 2：rfid 3：底部
 	public static final Integer DEVICE = 0;//1：条码 2：rfid 3：底部
 	public static final Integer BAUDRATE = 115200;//波特率
-	public static final Integer EVENMODE = 1;//事件类型
+	public static final int EVENMODE = 1;//事件类型
 
 }
